@@ -1,15 +1,11 @@
 package libdaemonjvm.internal
 
+import libdaemonjvm.SocketPaths
+
 import java.io.IOException
 import java.net.{StandardProtocolFamily, UnixDomainSocketAddress}
-import java.nio.channels.SocketChannel
-import java.nio.file.Path
-
+import java.nio.channels.{ServerSocketChannel, SocketChannel}
 import scala.util.control.NonFatal
-import java.nio.channels.ServerSocketChannel
-import java.nio.file.Paths
-
-import libdaemonjvm.SocketPaths
 
 object Java16SocketHandler extends SocketHandler {
   def usesWindowsPipe: Boolean = false

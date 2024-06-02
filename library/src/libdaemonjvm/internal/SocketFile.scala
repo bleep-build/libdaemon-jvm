@@ -1,11 +1,10 @@
 package libdaemonjvm.internal
 
+import libdaemonjvm.SocketPaths
+import libdaemonjvm.errors.*
+
 import java.net.SocketException
 import java.nio.channels.SocketChannel
-import java.nio.file.Path
-
-import libdaemonjvm.errors._
-import libdaemonjvm.SocketPaths
 
 object SocketFile {
   def canConnect(paths: SocketPaths): Either[Throwable, Unit] = {
